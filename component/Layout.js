@@ -5,7 +5,7 @@ export default function Layout( {children} ) {
         <>
             <NavBar />
             <div>{children}</div>
-            <style jsx>{`
+            <style global jsx>{`
                 * {
                     margin: 0px;
                     padding: 0px;

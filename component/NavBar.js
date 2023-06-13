@@ -6,24 +6,26 @@ export default function NavBar() {
 
     return (
         <nav>
-            <div className="logo">TS VOC</div>
+            <div className="logo">
+                <Link href="/">
+                    TS VOC
+                </Link>
+            </div>
             <div className="btnBox">
                 <div className="btn">ADD</div>
                 &nbsp;&nbsp;
-                <Link href="/setting">
-                    <div className="btn">SETTING</div>
-                </Link>
+                {
+                router.pathname === '/' 
+                 ?  <Link href="/setting">
+                        <div>SETTING</div>
+                    </Link>
+                 :  <Link href="/">
+                        <div>REPORT</div>
+                    </Link>
+                }
+                
             </div>
             <style jsx>{`
-                * {
-                    margin: 0px;
-                    padding: 0px;
-                    box-sizing: border-box;
-                }
-                a {
-                    text-decoration: none;
-                    color: #000;
-                }
                 nav {
                     border-bottom: 1px solid #000;
                     display: flex;

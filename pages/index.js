@@ -1,7 +1,24 @@
+import InquiryBox from "@/component/InquiryCard";
+
 export default function Home() {
+  const indexList = [{i: 1}, {i: 2}, {i: 3}]
+
   return (
-    <>
-      <h1>this is index page</h1>
-    </>
+    <div id="inquiryBox">
+    {
+      indexList.map( item => (
+        <InquiryBox index={item.i} key={item.i}/>
+      ))
+    }
+      
+
+      <style jsx>{`
+        #inquiryBox {
+          width: 100%;
+          padding: 0px 10px;
+          display: flex;
+        }          
+      `}</style>
+    </div>
   )
 }
