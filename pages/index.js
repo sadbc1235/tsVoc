@@ -17,6 +17,7 @@ export default function Home() {
           width: 100%;
           padding: 0px 10px;
           display: flex;
+          flex-wrap: wrap;
         }          
       `}</style>
     </div>
